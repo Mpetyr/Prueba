@@ -1,0 +1,7 @@
+.container {
+    background: white;
+}
+
+.container .titulo {
+    margin-top: 40px;
+}

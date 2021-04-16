@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <img class="imagen" src="/assets/Imagenes/libro-pequeño.png" title="OlSoftware">
+
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text">Inicio de sesión</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <div class="form-group">
+                    <input class="login" type="email" formControlName="email" required/>
+                    <span></span>
+                    <label>Usuario</label>
+                </div>
+                <div class="form-group">
+                    <input class="login" type="password" formControlName="password" required/>
+                    <span></span>
+                    <label>Contraseña</label>
+                </div>
+                <input type="submit" value="Iniciar sesión">
+            </form>
+            <div class="pass">
+                <p> Olvido la contraseña? <a [routerLink]="['/forgot-password']">Recuperar</a></p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

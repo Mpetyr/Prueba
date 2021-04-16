@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "prueba-tecnica-29088": {
+      "hosting": {
+        "prueba-tecnica": [
+          "prueba-tecnica-29088"
+        ]
+      }
+    }
+  }
+}

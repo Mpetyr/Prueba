@@ -1,0 +1,36 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Prueba Front-end</span>
+        </div>
+    </nav>
+
+
+    <form class="form" (ngSubmit)="onSave()" [formGroup]="employeeForm">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombres" formControlName="nombres">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Apellidos" formControlName="apellidos">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Identificación (C.C)" formControlName="identificacion">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Rol asociado" formControlName="role">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Estado" formControlName="estado">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Teléfono" formControlName="telefono">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Correo electrónico" formControlName="email">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block">Guardar</button>
+    </form>
+
+    <button type="button" class="btn btn-block btn-secondary mt-2" (click)="onGoBackToList()">Volver a la lista</button>

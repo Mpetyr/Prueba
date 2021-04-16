@@ -1,0 +1,63 @@
+<app-sidebar></app-sidebar>
+
+
+
+
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Prueba Front-end</span>
+        </div>
+    </nav>
+
+
+</div>
+
+
+<div class="container">
+
+
+    <div class="container titulo">
+        <h2>
+            <span class="icon"><i class="fas fa-users"></i></span>
+            <span class="title"> Usuarios existentes</span>
+        </h2>
+        <button class="boton" (click)="create()">Crear</button>
+
+
+    </div>
+
+    <div class="container tabla">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Identificación (C.C)</th>
+                        <th scope="col">Rol asociado</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Correo electrónico</th>
+                        <th class="d-none d-sm-block" scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-info" *ngFor="let item of employees$ | async">
+                        <th scope="row">{{ item.nombres }}</th>
+                        <td>{{ item.apellidos }}</td>
+                        <td>{{ item.identificacion }}</td>
+                        <td>{{ item.role }}</td>
+                        <td>{{ item.estado }}</td>
+                        <td>{{ item.telefono }}</td>
+                        <td>{{ item.email }}</td>
+                        <td class="bnt-group d-none d-sm-block" role="group">
+                            <button type="button" class="btn btn-outline-warning m-1" (click)="onGoToEdit(item)">Editor</button>
+                            <button type="button" class="btn btn-outline-danger m-1" (click)="onGoToDelete(item)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

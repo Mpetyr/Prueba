@@ -1,0 +1,14 @@
+.form {
+    justify-content: center;
+}
+
+.form-group input {
+    margin: 10px;
+    width: 40%;
+    display: flex;
+}
+
+.btn {
+    width: 100%;
+    background: blue;
+}
