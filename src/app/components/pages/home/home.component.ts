@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     try {
       const user = await this.pagesSvc.login(email, password);
       if(user){
-        this.router.navigate(['admin'])
+        this.router.navigate(['users'])
       }
     } catch (error) {
       console.log(error);
